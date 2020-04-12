@@ -3,20 +3,21 @@
   <div class="header">
     <router-link to="/">
       <div class="logo">
-        <img src="/ordinary.png">
+        <img src="/rings.png">
       </div>
     </router-link>
     <div class="title">
-      <h1>Museum of Ordinary Objects</h1>
+      <h1>The Wedding Blog</h1>
     </div>
+    <div class="nav-link"><router-link to="/post"> New Post</router-link></div>
   </div>
   <div class="content">
     <router-view />
   </div>
   <div class="h-divider"></div>
   <div class="footer">
-    <div class="a-link"><router-link to="/admin">Admin</router-link></div>
-    <div class="github"><p>Find Kinsley on <a href="https://github.com/BYU-CS-260-Winter-2020/lab-4-museum-of-ordinary-objects-kinsleyc" target="_blank">Github</a></p></div>
+    <div class="a-link"><router-link to="/post"> New Post</router-link></div>
+    <div class="github"><p>Find Kinsley on <a href="https://github.com/kinsleyc/creative-project-4" target="_blank">Github</a></p></div>
   </div>
 </div>
 </template>
@@ -38,8 +39,21 @@ body {
 .header {
   display: flex;
   padding: 10px 100px 0px 100px;
-  background-color: #5BDEFF;
-  color: #1C454F;
+  background-color: #ffcce6;
+  color: black;
+}
+
+.header a {
+  text-decoration: none;
+  color: black;
+}
+
+.header a:hover {
+  text-decoration: underline;
+}
+
+.logo img {
+  width: 100px;
 }
 
 .title {
@@ -47,7 +61,14 @@ body {
 }
 
 .title h1 {
-  font-size: 30px;
+  font-size: 40px;
+  font-family: 'Snell Roundhand', cursive;
+}
+
+.nav-link {
+  position: absolute;
+  top: 60px;
+  right: 50px;
 }
 
 .content {
@@ -72,6 +93,12 @@ body {
 
 .footer a:hover {
   text-decoration: none;
+}
+
+.h-divider {
+    height: 1px;
+    width: 100%;
+    border-top: 1px solid black;
 }
 
 h1 {
